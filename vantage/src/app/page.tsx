@@ -3,10 +3,16 @@ import Hero from '@/components/sections/Hero';
 import ProjectGrid from '@/components/sections/ProjectGrid';
 import Investment from '@/components/sections/Investment';
 import Contact from '@/components/sections/Contact';
+// Import the SEO component and Data
+import VideoSchema from '@/components/seo/VideoSchema';
+import { PROJECTS } from '@/lib/data';
 
 export default function Home() {
     return (
         <main className="bg-zinc-950 min-h-screen">
+            {/* ✅ SEO: Inject Structured Data */}
+            <VideoSchema projects={PROJECTS} />
+
             <Navbar />
             <Hero />
             <ProjectGrid />
