@@ -20,35 +20,38 @@ export default function Investment() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className={`relative p-8 rounded-2xl border ${
+                            className={`relative p-8 rounded-2xl border flex flex-col ${
                                 tier.recommended
-                                    ? 'bg-zinc-900 border-vantage-champagne shadow-[0_0_30px_rgba(253,230,138,0.1)]'
+                                    ? 'bg-zinc-900 border-amber-200 shadow-[0_0_30px_rgba(253,230,138,0.1)]'
                                     : 'bg-zinc-900/50 border-zinc-800'
                             }`}
                         >
                             {tier.recommended && (
-                                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-vantage-champagne text-zinc-950 text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">
+                                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-200 text-zinc-950 text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">
                   Most Popular
                 </span>
                             )}
 
                             <h3 className="text-vantage-silver text-xl font-serif mb-2">{tier.name}</h3>
                             <div className="text-3xl font-light text-white mb-4">{tier.price}</div>
-                            <p className="text-zinc-500 text-sm mb-8 leading-relaxed">{tier.description}</p>
 
-                            <ul className="space-y-4 mb-8">
+                            {/* ✅ FIX 1: Lighter text color (zinc-400) for better readability */}
+                            <p className="text-zinc-400 text-sm mb-8 leading-relaxed">{tier.description}</p>
+
+                            <ul className="space-y-4 mb-8 flex-grow">
                                 {tier.features.map((feature) => (
                                     <li key={feature} className="flex items-center gap-3 text-sm text-zinc-300">
-                                        <Check className="w-4 h-4 text-vantage-champagne" />
+                                        <Check className="w-4 h-4 text-amber-200" />
                                         {feature}
                                     </li>
                                 ))}
                             </ul>
 
+                            {/* ✅ FIX 2: Used standard 'bg-amber-200' to guarantee button visibility */}
                             <button className={`w-full py-4 rounded-xl text-xs uppercase tracking-widest font-bold transition-all ${
                                 tier.recommended
-                                    ? 'bg-vantage-champagne text-zinc-950 hover:bg-white'
-                                    : 'border border-zinc-700 text-white hover:bg-zinc-800'
+                                    ? 'bg-amber-200 text-zinc-950 hover:bg-white'
+                                    : 'border border-zinc-700 text-white hover:bg-zinc-800 hover:border-zinc-500'
                             }`}>
                                 Inquire Now
                             </button>

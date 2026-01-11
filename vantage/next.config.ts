@@ -1,8 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com', // ✅ Allow Unsplash
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.mixkit.co', // If you use Mixkit for thumbnails
+      },
+    ],
+  },
 };
 
 export default nextConfig;
