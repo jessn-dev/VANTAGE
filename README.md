@@ -1,4 +1,5 @@
-# VANTAGE is a premium, performance-first digital portfolio designed specifically for the modern videographer and photographer. In an era where content is split between cinematic 16:9 storytelling and high-energy 9:16 vertical social media, VANTAGE bridges the gap with a sophisticated, unified viewing experience.
+# VANTAGE 
+Is a premium, performance-first digital portfolio designed specifically for the modern videographer and photographer. In an era where content is split between cinematic 16:9 storytelling and high-energy 9:16 vertical social media, VANTAGE bridges the gap with a sophisticated, unified viewing experience.
 
 Built with a "Dark Cinema" aesthetic, the platform acts as a digital gallery that "gets out of the way," allowing the vibrant colors and motion of the visual work to take center stage. Every interaction is engineered to feel like a high-end physical gallery—quiet, luxurious, and focused.
 
